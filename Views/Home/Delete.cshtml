@@ -1,0 +1,29 @@
+﻿@model AssignMVCRestaurantCRUD.Models.RestaurantTab
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Restaurant</h2>
+
+
+<form action="/Home/Delete/@Model.Id" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-10">
+
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <label for="Name">Name</label>
+            @Model.Name
+        </div>
+
+        <div class="form-group col-md-10">
+            <label for="Type">Type</label>
+            value=@Model.Type
+        </div>
+
+
+    </div>
+    <button type="submit" class="btn btn-danger">Delete Restaurant</button>
+    <a class="btn btn-dark" href="/Home/index">Cancel</a>
+</form>
+
+
